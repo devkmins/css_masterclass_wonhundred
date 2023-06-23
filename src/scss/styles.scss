@@ -1,0 +1,247 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+
+  .header {
+    display: grid;
+    grid-template-columns: 1.5fr 6fr 2fr;
+    align-items: center;
+    position: fixed;
+    padding: 5px;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    z-index: 100;
+
+    .header__first {
+      display: flex;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .header__second span,
+    .header__last span {
+      font-size: 12px;
+      padding-left: 30px;
+    }
+  }
+
+  .main {
+    .main__img {
+      width: 100%;
+      height: 100vh;
+      background-image: url("../../img/main.png");
+      background-position: center center;
+      background-size: cover;
+      padding-top: 25px;
+    }
+
+    .main__images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(385px, 1fr));
+
+      .main__image-men {
+        width: 100%;
+        height: 100vh;
+        background-image: url("../../img/main_men.png");
+        background-position: center center;
+        background-size: cover;
+      }
+
+      .main__image-women {
+        width: 100%;
+        height: 100vh;
+        background-image: url("../../img/main_women.png");
+        background-position: center center;
+        background-size: cover;
+      }
+    }
+
+    .mens__clothing {
+      margin: 35px 5px;
+    }
+
+    .mens__clothing-span,
+    .womens__clothing-span {
+      font-size: 20px;
+    }
+
+    .mens__clothing-list,
+    .womens__clothing-list {
+      display: grid;
+      grid-template-columns: repeat(3, 33.333333%);
+      position: relative;
+      height: 92.5vh;
+      margin: 15px 0px;
+      padding-right: 10px;
+      gap: 5px;
+    }
+
+    .mens__clothing-first--img,
+    .mens__clothing-second--img,
+    .mens__clothing-last--img,
+    .womens__clothing-first--img,
+    .womens__clothing-second--img,
+    .womens__clothing-last--img {
+      width: 100%;
+      height: 100%;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    .mens__clothing-first--info,
+    .mens__clothing-second--info,
+    .mens__clothing-last--info,
+    .womens__clothing-first--info,
+    .womens__clothing-second--info,
+    .womens__clothing-last--info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+
+      span {
+        margin-top: 10px;
+      }
+    }
+
+    .mens__clothing-first {
+      .mens__clothing-first--img {
+        background-image: url("../../img/mens_1.png");
+      }
+    }
+
+    .mens__clothing-second {
+      .mens__clothing-second--img {
+        background-image: url("../../img/mens_2.png");
+      }
+    }
+
+    .mens__clothing-last {
+      .mens__clothing-last--img {
+        background-image: url("../../img/mens_3.png");
+      }
+    }
+
+    .womens__clothing {
+      margin: 125px 5px;
+
+      .womens__clothing-first {
+        .womens__clothing-first--img {
+          background-image: url("../../img/womens_1.png");
+        }
+      }
+
+      .womens__clothing-second {
+        .womens__clothing-second--img {
+          background-image: url("../../img/womens_2.png");
+        }
+      }
+
+      .womens__clothing-last {
+        .womens__clothing-last--img {
+          background-image: url("../../img/womens_1.png");
+        }
+      }
+    }
+
+    .jeans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(385px, 1fr));
+
+      .men__jeans,
+      .women__jeans {
+        width: 100%;
+        height: 130vh;
+        background-position: center center;
+        background-size: cover;
+        padding: 15px;
+      }
+
+      .men__jeans {
+        background-image: url("../../img/mens_4.png");
+      }
+
+      .women__jeans {
+        background-image: url("../../img/womens_4.png");
+      }
+    }
+
+    .boots {
+      margin: 75px 0px 70px 0px;
+
+      .boots__info {
+        margin-left: 10px;
+
+        span {
+          font-weight: 700;
+          font-size: 38px;
+        }
+
+        p {
+          width: 72.5%;
+          font-weight: 300;
+          font-size: 15px;
+          line-height: 25px;
+        }
+      }
+
+      .boots__images {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10px;
+
+        .boots__images-first,
+        .boots__images-second,
+        .boots__images-third {
+          width: 100%;
+          height: 90vh;
+          background-position: center center;
+          background-size: cover;
+        }
+
+        .boots__images-first {
+          background-image: url("../../img/boots_1.png");
+        }
+
+        .boots__images-second {
+          background-image: url("../../img/boots_2.png");
+        }
+
+        .boots__images-third {
+          background-image: url("../../img/boots_3.png");
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 12px;
+    margin: 75px 75px;
+
+    .footer__left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+
+    .footer__right {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      p {
+        margin: 75px;
+      }
+    }
+  }
+}
